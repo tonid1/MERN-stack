@@ -63,7 +63,7 @@ function Dashboard(){
 
     function addPlayer(id){
 
-      axios.put('/own/' + id, {userId: currentUser.id});  
+      axios.put('https://mern-stack-tonid.herokuapp.com/own/' + id, {userId: currentUser.id});  
 
       setRender(!render);
 
@@ -114,7 +114,7 @@ function Dashboard(){
     }
 
     function handleUpdate(id){
-        axios.put('/put/' + id, updatedPlayer);
+        axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer);
 
         closeUpdate();
 
@@ -122,7 +122,7 @@ function Dashboard(){
     }
 
     function deleteItem(id){
-       axios.delete('/delete/'+id);
+       axios.delete('https://mern-stack-tonid.herokuapp.com/delete/'+id);
 
        setRender(!render);
     }
