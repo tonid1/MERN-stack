@@ -41,7 +41,7 @@ function NewPlayer(){
           data.append('image', image)
         }
     
-        axios.post('/newPlayer', data).then( res => console.log(res));
+        axios.post('https://mern-stack-tonid.herokuapp.com/newPlayer', data).then( res => console.log(res));
     
         setPlayer({
           firstName: '',

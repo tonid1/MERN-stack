@@ -31,7 +31,7 @@ function AdminView(){
 
         setCurrentUser(user);
 
-        fetch('/myplayers/' + user.id).then(res => {
+        fetch('https://mern-stack-tonid.herokuapp.com/myplayers/' + user.id).then(res => {
           if(res.ok){
             return res.json();
           }
@@ -48,7 +48,7 @@ function AdminView(){
   }
 
   function handleRemoval(id){
-    axios.put('/own/' + id);
+    axios.put('https://mern-stack-tonid.herokuapp.com/own/' + id);
 
     setRender(!render);
   }

@@ -31,7 +31,7 @@ function Login(){
     async function HandleLogin(e){
         e.preventDefault();
 
-        const result = await fetch('http://localhost:3002/login', {
+        const result = await fetch('https://mern-stack-tonid.herokuapp.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

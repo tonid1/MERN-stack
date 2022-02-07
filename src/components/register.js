@@ -41,7 +41,7 @@ function Register(){
         }
         else{
          
-            const result = await fetch('http://localhost:3002/register', {
+            const result = await fetch('https://mern-stack-tonid.herokuapp.com/register', {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json',
