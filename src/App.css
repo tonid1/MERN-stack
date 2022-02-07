@@ -237,6 +237,7 @@ button:not([disabled]).add-player-btn:hover{
   outline: none;
   border-radius: 2px;
   height: fit-content;
+  cursor: pointer;
 }
 
 /* UPDATING */
