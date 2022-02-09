@@ -61,9 +61,9 @@ function Dashboard(){
 
     // MY LIST MANIPULATION
 
-    function addPlayer(id){
+    async function addPlayer(id){
 
-      axios.put('https://mern-stack-tonid.herokuapp.com/own/' + id, {userId: currentUser.id});  
+      await axios.put('https://mern-stack-tonid.herokuapp.com/own/' + id, {userId: currentUser.id});  
 
       setRender(!render);
 
@@ -113,8 +113,8 @@ function Dashboard(){
             })
     }
 
-    function handleUpdate(id){
-        axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer);
+    async function handleUpdate(id){
+        await axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer);
 
         closeUpdate();
 
