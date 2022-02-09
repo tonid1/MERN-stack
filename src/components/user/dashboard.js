@@ -114,7 +114,7 @@ function Dashboard(){
     }
 
     function handleUpdate(id){
-        axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer);
+        axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer).then(console.log(res.json()));
 
         closeUpdate();
 
