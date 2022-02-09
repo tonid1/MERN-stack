@@ -29,7 +29,7 @@ function Dashboard(){
     }])
 
     async function populatePlayers(){
-        await fetch('https://mern-stack-tonid.herokuapp.com/players').then(res => {
+        await fetch('/players').then(res => {
         if(res.ok){
             return res.json();
         }
@@ -61,9 +61,9 @@ function Dashboard(){
 
     // MY LIST MANIPULATION
 
-    async function addPlayer(id){
+    function addPlayer(id){
 
-      await axios.put('https://mern-stack-tonid.herokuapp.com/own/' + id, {userId: currentUser.id});  
+      axios.put('/own/' + id, {userId: currentUser.id});  
 
       setRender(!render);
 
@@ -113,8 +113,8 @@ function Dashboard(){
             })
     }
 
-    async function handleUpdate(id){
-        await axios.put('https://mern-stack-tonid.herokuapp.com/put/' + id, updatedPlayer);
+    function handleUpdate(id){
+        axios.put('/put/' + id, updatedPlayer);
 
         closeUpdate();
 
@@ -122,7 +122,7 @@ function Dashboard(){
     }
 
     function deleteItem(id){
-       axios.delete('https://mern-stack-tonid.herokuapp.com/delete/'+id);
+       axios.delete('/delete/'+id);
 
        setRender(!render);
     }
